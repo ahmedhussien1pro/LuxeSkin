@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Skin | Premium Skincare & Wellness</title>
+    <link rel="shortcut icon" href="./assets/imgs/favicon.svg" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ivory: '#F8F3ED',
+                        taupe: '#A38F84',
+                        sage: '#3A5A5B',
+                        gold: '#D4B483'
+                        
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+<body class="text-gray-800 antialiased">
+    <!-- Navigation -->
+    <header class="navbar-blur sticky top-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-white brand-font text-xl shadow-lg">LS</div>
+                <div>
+                    <div class="brand-font text-xl text-gray-800">LuxeSkin</div>
+                    <div class="text-xs text-gray-500 -mt-1">Curated Luxury Rituals</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="py-2 hover:text-sage transition duration-300">Home</a>
+                <a href="#about" class="py-2 hover:text-sage transition duration-300">About</a>
+                <a href="#shop" class="py-2 hover:text-sage transition duration-300">Shop</a>
+                <a href="#blog" class="py-2 hover:text-sage transition duration-300">Journal</a>
+                <a href="#contact" class="py-2 hover:text-sage transition duration-300">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-gray-200 text-sm hover:border-gold transition duration-300">
+                    <i class="fas fa-user text-xs"></i> Account
+                </button>
+                <button id="mobileToggle" class="md:hidden p-2 rounded-lg border border-gray-200">
+                    <i class="fas fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileNav" class="hidden md:hidden border-t border-gray-100 bg-white/90">
+            <div class="px-6 py-4 flex flex-col gap-3">
+                <a href="#home" class="py-2 hover:text-sage transition duration-300">Home</a>
+                <a href="#about" class="py-2 hover:text-sage transition duration-300">About</a>
+                <a href="#shop" class="py-2 hover:text-sage transition duration-300">Shop</a>
+                <a href="#blog" class="py-2 hover:text-sage transition duration-300">Journal</a>
+                <a href="#contact" class="py-2 hover:text-sage transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="home" class="mt-8 relative overflow-visible">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <!-- Hero Content -->
+                <div class="relative p-8 rounded-3xl glass-card subtle-shadow overflow-hidden">
+                    <svg class="absolute right-0 top-0 w-72 hero-wave" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 60C150 120 450 0 600 60V200H0V60Z" fill="#D4B483"></path>
+                    </svg>
+
+                    <div class="relative z-10 slide-in">
+                        <h1 class="brand-font text-4xl md:text-6xl text-gray-800 leading-tight">
+                            Rituals that whisper <span class="text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold">luxury</span>
+                        </h1>
+                        <p class="mt-6 text-xl text-gray-600 max-w-xl leading-relaxed">
+                            Beautifully crafted skincare with botanical-led formulations. Sustainable packaging, clinically informed results — designed for everyday elegance.
+                        </p>
+
+                        <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                            <a href="#shop" class="inline-flex items-center gap-2 px-8 py-4 rounded-full sage-gradient text-white font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-shopping-bag"></i>
+                                Shop Bestsellers
+                            </a>
+                            <a href="#about" class="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-gray-300 text-gray-700 font-semibold hover:border-gold hover:text-gold transition duration-300">
+                                <i class="fas fa-leaf"></i>
+                                Our Philosophy
+                            </a>
+                        </div>
+
+                        <div class="mt-8 flex items-center gap-6 text-sm text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-shipping-fast text-sage"></i>
+                                <span><span class="font-semibold">Free</span> shipping over $80</span>
+                            </div>
+                            <div class="w-1 h-1 bg-gray-300 rounded-full"></div>
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-undo text-sage"></i>
+                                <span><span class="font-semibold">30</span>-day returns</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-white/80 rounded-xl border flex items-start gap-3">
+                                <div class="w-12 h-12 rounded-lg sage-gradient flex items-center justify-center text-white">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Clean formulas</div>
+                                    <div class="text-xs text-gray-500">No parabens or sulfates</div>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white/80 rounded-xl border flex items-start gap-3">
+                                <div class="w-12 h-12 rounded-lg gold-gradient flex items-center justify-center text-white">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Sustainable packaging</div>
+                                    <div class="text-xs text-gray-500">Minimal & recyclable</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Images -->
+                <div class="rounded-3xl overflow-hidden subtle-shadow">
+                    <div class="grid grid-cols-2 gap-3 p-4 bg-white">
+                        <div class="row-span-2 rounded-xl overflow-hidden">
+                            <img src="https://plus.unsplash.com/premium_photo-1682096423780-41ca1b04af68?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=1200&q=80&auto=format&fit=crop" alt="Premium skincare" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl overflow-hidden">
+                            <img src="https://www.ecofriendlyhabits.com/wp-content/uploads/2022/12/natural-skin-care-ingredients.jpg?w=1200&q=80&auto=format&fit=crop" alt="Natural ingredients" class="w-full h-full object-cover">
+                        </div>
+                        <div class="rounded-xl p-4 glass-card flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs text-gray-500">Limited Edition</div>
+                                <div class="font-medium mt-1 brand-font">Autumn Ritual Kit</div>
+                                <div class="text-sm text-gray-500 mt-1">Includes travel essentials</div>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#shop" class="px-4 py-2 rounded-lg border border-sage text-sage text-sm font-medium hover:bg-sage hover:text-white transition duration-300">
+                                    Shop Kit
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Banners -->
+        <section class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="rounded-3xl p-6 glass-card subtle-shadow card-hover">
+                <div class="flex items-start gap-4">
+                    <div class="w-14 h-14 rounded-xl sage-gradient flex items-center justify-center text-white">
+                        <i class="fas fa-star text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-medium brand-font text-lg">Curated Bestsellers</div>
+                        <div class="text-sm text-gray-500">Trusted by our community</div>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center gap-3">
+                    <img src="https://www.herhynessbeauty.com/cdn/shop/files/HydraGlowSerum30ml-PDP_1.jpg?v=1740666101?w=200&q=60&auto=format&fit=crop" alt="Hydra Glow Serum" class="w-16 h-16 rounded-xl object-cover">
+                    <div class="flex-1">
+                        <div class="font-medium">Hydra Glow Serum</div>
+                        <div class="text-sm text-gray-500">$48 • hydrating hero</div>
+                    </div>
+                    <a href="#shop" class="text-sm text-sage font-medium hover:text-gold transition duration-300">Explore →</a>
+                </div>
+            </div>
+
+            <div class="rounded-3xl p-6 gold-gradient text-white subtle-shadow card-hover">
+                <div class="flex items-center gap-4">
+                    <div class="flex-1">
+                        <div class="text-sm opacity-90">Limited Time</div>
+                        <div class="font-medium brand-font text-xl">Gift with Purchase</div>
+                        <div class="text-sm opacity-90 mt-1">Free travel set when you spend $120</div>
+                    </div>
+                    <div>
+                        <a href="#shop" class="px-4 py-2 rounded-lg bg-white/20 hover:bg-white/30 transition duration-300 text-sm font-medium">
+                            Shop Offers
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rounded-3xl p-6 bg-white subtle-shadow card-hover">
+                <div class="mb-4">
+                    <i class="fas fa-spa text-2xl text-sage"></i>
+                </div>
+                <div class="font-medium brand-font text-lg">Self-care Rituals</div>
+                <div class="text-sm text-gray-500 mt-1 mb-4">Discover our ritual bundles for morning and night routines.</div>
+                <a href="#blog" class="text-sm text-sage font-medium hover:text-gold transition duration-300">Read Rituals →</a>
+            </div>
+        </section>
+
+        <!-- Shop Section -->
+        <section id="shop" class="mt-16">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
+                <div>
+                    <h2 class="brand-font text-3xl md:text-4xl text-gray-800">Shop Collection</h2>
+                    <p class="text-gray-600">Explore categories and find your perfect ritual</p>
+                </div>
+
+                <div class="flex items-center gap-3 w-full md:w-auto">
+                    <input id="searchInput" type="search" placeholder="Search products..." class="flex-1 md:w-48 px-4 py-2 border border-gray-200 rounded-lg focus:border-sage focus:outline-none transition duration-300" />
+                    <select id="sortSelect" class="px-4 py-2 border border-gray-200 rounded-lg focus:border-sage focus:outline-none transition duration-300">
+                        <option value="featured">Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Highest Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Filters Sidebar -->
+                <aside class="lg:col-span-1 bg-white p-6 rounded-3xl subtle-shadow h-fit">
+                    <h5 class="font-semibold mb-6 brand-font text-lg">Filters</h5>
+                    
+                    <div class="space-y-6">
+                        <!-- Category Filter -->
+                        <div>
+                            <div class="text-sm text-gray-500 mb-3 font-medium">Category</div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="category-filter rounded border-gray-300 text-sage focus:ring-sage" value="cleansers">
+                                    <span class="text-sm">Cleansers</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="category-filter rounded border-gray-300 text-sage focus:ring-sage" value="serums">
+                                    <span class="text-sm">Serums</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="category-filter rounded border-gray-300 text-sage focus:ring-sage" value="moisturizers">
+                                    <span class="text-sm">Moisturizers</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="category-filter rounded border-gray-300 text-sage focus:ring-sage" value="masks">
+                                    <span class="text-sm">Masks</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="category-filter rounded border-gray-300 text-sage focus:ring-sage" value="kits">
+                                    <span class="text-sm">Ritual Kits</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Price Filter -->
+                        <div>
+                            <div class="text-sm text-gray-500 mb-3 font-medium">Price Range</div>
+                            <div class="flex items-center gap-2">
+                                <input id="priceMin" type="number" placeholder="Min" class="w-20 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:border-sage focus:outline-none" />
+                                <span class="text-gray-400">-</span>
+                                <input id="priceMax" type="number" placeholder="Max" class="w-20 px-3 py-2 border border-gray-200 rounded-lg text-sm focus:border-sage focus:outline-none" />
+                                <button id="priceFilterBtn" class="px-3 py-2 rounded-lg border border-sage text-sage text-sm hover:bg-sage hover:text-white transition duration-300">
+                                    Apply
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Skin Concerns -->
+                        <div>
+                            <div class="text-sm text-gray-500 mb-3 font-medium">Skin Concerns</div>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="concern-filter rounded border-gray-300 text-sage focus:ring-sage" value="hydration">
+                                    <span class="text-sm">Hydration</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="concern-filter rounded border-gray-300 text-sage focus:ring-sage" value="anti-aging">
+                                    <span class="text-sm">Anti-aging</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="concern-filter rounded border-gray-300 text-sage focus:ring-sage" value="brightening">
+                                    <span class="text-sm">Brightening</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="checkbox" class="concern-filter rounded border-gray-300 text-sage focus:ring-sage" value="sensitive">
+                                    <span class="text-sm">Sensitive Skin</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="lg:col-span-3">
+                    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Products will be rendered here by JavaScript -->
+                    </div>
+
+                    <div id="noResults" class="hidden mt-8 text-center text-gray-500">
+                        <i class="fas fa-search text-4xl mb-4 opacity-50"></i>
+                        <p>No products found. Try adjusting your filters.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="rounded-3xl bg-white p-8 subtle-shadow">
+                    <h2 class="brand-font text-3xl md:text-4xl text-gray-800 mb-6">Our Philosophy</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        At LuxeSkin, we craft premium skincare inspired by nature's wisdom. Each formula is carefully developed using sustainably-sourced botanicals and clinically-proven actives.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        We believe in gentle effectiveness and transparent ingredient lists. Our commitment to sustainability extends from our sourcing to our recyclable packaging.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl sage-gradient flex items-center justify-center text-white flex-shrink-0">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium mb-1">Clean Ingredients</div>
+                                <div class="text-sm text-gray-500">No parabens, sulfates, or artificial dyes in our formulations.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-white flex-shrink-0">
+                                <i class="fas fa-recycle"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium mb-1">Sustainable Packaging</div>
+                                <div class="text-sm text-gray-500">Recyclable materials and minimal waste in every product.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center text-white flex-shrink-0">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium mb-1">Clinically Tested</div>
+                                <div class="text-sm text-gray-500">All products undergo rigorous testing for safety and efficacy.</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-pink-500 flex items-center justify-center text-white flex-shrink-0">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium mb-1">Cruelty-Free</div>
+                                <div class="text-sm text-gray-500">Never tested on animals, certified cruelty-free.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-6 text-center mb-8">
+                        <div>
+                            <div class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold mb-2">100%</div>
+                            <div class="text-sm text-gray-600">Natural Origin</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold mb-2">50K+</div>
+                            <div class="text-sm text-gray-600">Happy Customers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold mb-2">15+</div>
+                            <div class="text-sm text-gray-600">Years Experience</div>
+                        </div>
+                    </div>
+
+                    <a href="#blog" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-sage text-sage hover:bg-sage hover:text-white transition duration-300">
+                        <i class="fas fa-book-open"></i>
+                        Read Our Stories
+                    </a>
+                </div>
+
+                <div class="rounded-3xl overflow-hidden subtle-shadow floating-animation">
+                    <img src="https://static.wixstatic.com/media/eacd15_d5aec76db22d46f5875fa0f019072919~mv2.jpg/v1/fill/w_843,h_843,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/eacd15_d5aec76db22d46f5875fa0f019072919~mv2.jpg?w=1200&q=800&auto=format&fit=crop" alt="Natural skincare ingredients" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section-padding">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between mb-12">
+                <div>
+                    <h2 class="brand-font text-3xl md:text-4xl text-gray-800 mb-2">From the Journal</h2>
+                    <p class="text-gray-600">Tips, ingredient deep dives, rituals and skincare wisdom.</p>
+                </div>
+                <a href="#blog" class="mt-4 md:mt-0 text-sage font-medium hover:text-gold transition duration-300">View All Articles →</a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="rounded-3xl bg-white p-6 subtle-shadow card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="https://magazine.vaniday.com/wp-content/uploads/2024/06/3-15-1024x1024.png?w=1200&q=80&auto=format&fit=crop" alt="Hyaluronic acid skincare" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-xs text-sage font-medium px-2 py-1 rounded-full bg-sage/10">Ingredient Spotlight</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 brand-font">Why Hyaluronic Acid is a Hydration Hero</h3>
+                    <p class="text-sm text-gray-600 mb-4">Everything you need to know about hyaluronic acid and how to incorporate it into your daily routine.</p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>5 min read</span>
+                        <a href="#" class="text-sage hover:text-gold transition duration-300">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="rounded-3xl bg-white p-6 subtle-shadow card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="https://kao-h.assetsadobe3.com/is/image/content/dam/sites/kaousa/www-curel-com/images/en-gb/curel-uk-blog-images/Curel_OB_range_on_towel.jpg?fmt=jpeg&qlt=85&fit=constrain,0&wid=1920" alt="Double cleansing routine" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-xs text-gold font-medium px-2 py-1 rounded-full bg-gold/10">Skincare Tips</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 brand-font">The Ritual of Double Cleansing</h3>
+                    <p class="text-sm text-gray-600 mb-4">A comprehensive guide to cleansing without stripping your skin's natural barrier.</p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>7 min read</span>
+                        <a href="#" class="text-sage hover:text-gold transition duration-300">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="rounded-3xl bg-white p-6 subtle-shadow card-hover">
+                    <div class="h-48 rounded-xl overflow-hidden mb-4">
+                        <img src="https://dermaflash.com/cdn/shop/articles/Adobe_Express_-_file_21_1512x.jpg?v=1751551147?w=1200&q=80&auto=format&fit=crop" alt="Niacinamide benefits" class="w-full h-full object-cover">
+                    </div>
+                    <div class="mb-3">
+                        <span class="text-xs text-purple-600 font-medium px-2 py-1 rounded-full bg-purple-100">Beauty Science</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 brand-font">Ingredient Spotlight: Niacinamide</h3>
+                    <p class="text-sm text-gray-600 mb-4">Discover why niacinamide is a versatile active suitable for most skin types and concerns.</p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>6 min read</span>
+                        <a href="#" class="text-sage hover:text-gold transition duration-300">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-white rounded-3xl subtle-shadow ">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="brand-font text-3xl md:text-4xl text-gray-800 m-4">Get in Touch</h2>
+                    <p class="text-gray-600 m-8 mt-0 text-lg">
+                        Questions about products, orders, or need personalized skincare advice? Our beauty experts are here to help you achieve your skin goals.
+                    </p>
+
+                    <div class="space-y-6 px-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 sage-gradient rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-lg">Email Support</div>
+                                <div class="text-gray-600">support@luxeskin.com</div>
+                                <div class="text-sm text-gray-500">Response within 24 hours</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 gold-gradient rounded-xl flex items-center justify-center text-white">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-lg">Phone Support</div>
+                                <div class="text-gray-600">+20 123 456 789</div>
+                                <div class="text-sm text-gray-500">Mon - Fri, 9:00 AM - 6:00 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center text-white">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="font-medium text-lg">WhatsApp Chat</div>
+                                <div class="text-gray-600">Instant support</div>
+                                <div class="text-sm text-gray-500">Available 24/7</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-3xl p-8 me-5">
+                    <form id="contactForm" class="space-y-6 ">
+                        <div>
+                            <input type="text" name="name" placeholder="Your Name" required 
+                                   class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:border-sage focus:outline-none transition duration-300" />
+                        </div>
+                        <div>
+                            <input type="email" name="email" placeholder="Your Email" required 
+                                   class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:border-sage focus:outline-none transition duration-300" />
+                        </div>
+                        <div>
+                            <select name="topic" class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:border-sage focus:outline-none transition duration-300">
+                                <option value="">Select Topic</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="skincare-consultation">Skincare Consultation</option>
+                                <option value="order-support">Order Support</option>
+                                <option value="general">General Question</option>
+                            </select>
+                        </div>
+                        <div>
+                            <textarea name="message" rows="4" placeholder="How can we help you?" required 
+                                      class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:border-sage focus:outline-none transition duration-300 resize-none"></textarea>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button type="submit" class="flex-1 py-4 sage-gradient text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </button>
+                            <button type="button" id="whatsBtn" class="flex-1 py-4 border-2 border-green-500 text-green-500 rounded-xl font-semibold hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                WhatsApp
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-16 sage-gradient text-white py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-xl gold-gradient flex items-center justify-center text-white brand-font text-xl">LS</div>
+                        <div>
+                            <div class="brand-font text-xl">LuxeSkin</div>
+                            <div class="text-xs text-gray-300 -mt-1">Curated Luxury Rituals</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Premium skincare crafted with nature's finest ingredients for radiant, healthy skin.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center hover:bg-white/30 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 brand-font">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Ingredients</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Press</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 brand-font">Customer Care</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition duration-300">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Shipping Info</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Returns & Exchanges</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Size Guide</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6 brand-font">Newsletter</h4>
+                    <p class="text-gray-300 mb-4">Subscribe for skincare tips and exclusive offers</p>
+                    <div class="flex mb-4">
+                        <input type="email" placeholder="Your email" 
+                               class="flex-1 p-3 rounded-l-xl bg-white/20 text-white placeholder-gray-300 border-0 focus:outline-none focus:ring-2 focus:ring-gold" />
+                        <button class="gold-gradient text-gray-800 px-6 py-3 rounded-r-xl font-semibold hover:shadow-lg transition duration-300">
+                            Subscribe
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-400">Join 25,000+ beauty enthusiasts</p>
+                </div>
+            </div>
+
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">
+                    &copy; <span id="year">2024</span> LuxeSkin. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-gray-300 text-sm">
+                    <a href="#" class="hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-backdrop">
+        <div class="bg-white rounded-3xl max-w-4xl w-full mx-4 p-6 relative max-h-[90vh] overflow-y-auto">
+            <button id="modalClose" class="absolute right-6 top-6 p-2 rounded-full border border-gray-200 hover:bg-gray-100 transition duration-300 z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div id="modalBadge" class="hidden mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-semibold text-white"></span>
+                    </div>
+                    <img id="modalImg" src="" alt="" class="w-full h-80 object-cover rounded-2xl" />
+                </div>
+                
+                <div class="flex flex-col justify-between">
+                    <div>
+                        <h3 id="modalTitle" class="brand-font text-3xl text-gray-800 mb-4"></h3>
+                        <div class="flex items-center gap-4 mb-4">
+                            <div id="modalPrice" class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sage to-gold"></div>
+                            <div id="modalRating" class="text-sm text-yellow-600 rating-star"></div>
+                        </div>
+                        <div id="modalCategory" class="text-sm text-gray-500 mb-4"></div>
+                        <p id="modalDesc" class="text-gray-600 leading-relaxed mb-6"></p>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-semibold mb-3">Key Benefits:</h4>
+                            <ul id="modalBenefits" class="space-y-2 text-sm text-gray-600">
+                                <!-- Benefits will be added by JavaScript -->
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <label class="text-sm font-medium">Quantity:</label>
+                            <select class="px-3 py-2 border border-gray-200 rounded-lg">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex gap-4">
+                            <button id="modalAdd" class="flex-1 py-4 sage-gradient text-white rounded-xl font-semibold hover:shadow-lg transform hover:scale-105 transition duration-300">
+                                <i class="fas fa-shopping-cart mr-2"></i>
+                                Add to Cart
+                            </button>
+                            <button id="modalWhats" class="px-6 py-4 border-2 border-green-500 text-green-500 rounded-xl hover:bg-green-500 hover:text-white transition duration-300">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/201098909476" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp text-2xl text-white"></i>
+    </a>
+
+    <script src="./assets/Js/script.js"></script>
+</body>
+</html>

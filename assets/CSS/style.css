@@ -1,0 +1,141 @@
+        :root {
+            --ivory: #F8F3ED;
+            --taupe: #A38F84;
+            --sage: #3A5A5B;
+            --gold: #D4B483;
+            --dd:rgb(225, 192, 144);
+        }
+        
+        body {
+            background: linear-gradient(180deg, var(--ivory) 0%, #fff 35%);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--ivory) 0%, rgba(163, 143, 132, 0.1) 100%);
+        }
+        
+        .glass-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(163, 143, 132, 0.2);
+        }
+        
+        .card-hover {
+            transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.35s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(58, 90, 91, 0.08);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.8s ease-out forwards;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--gold) 0%, #E8C797 100%);
+        }
+        
+        .sage-gradient {
+            background: linear-gradient(135deg, var(--sage) 0%, #4A6B6C 100%);
+        }
+        
+        .hero-wave {
+            opacity: 0.08;
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(248, 243, 237, 0.95);
+            border-bottom: 1px solid rgba(163, 143, 132, 0.2);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            width: 64px;
+            height: 64px;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, #25d366, #22c55e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .modal-backdrop {
+            background: rgba(14, 15, 15, 0.45);
+            backdrop-filter: blur(4px);
+        }
+        
+        .rating-star {
+            filter: drop-shadow(0 2px 6px rgba(212, 180, 131, 0.25));
+        }
+        
+        .float-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 10;
+        }
+        
+        .subtle-shadow {
+            box-shadow: 0 4px 20px rgba(58, 90, 91, 0.08);
+        }
+        
+        .section-padding {
+            padding: 5rem 0;
+        }
+        
+        .product-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(58, 90, 91, 0.9));
+            color: white;
+            padding: 1.5rem;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .product-card:hover .product-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 3rem 0;
+            }
+        }
